@@ -31,15 +31,12 @@ def informationGain(dataset,all_attributes_IG,target_attribute):
         information_gain = entropy(dataset) - weighted_vals[foo]
         all_gains.append(information_gain)
     all_gains = np.around(all_gains, decimals=4, out=None)
-    #print(all_gains) #(Problem: no such thing as negative information gain)
+    #print(all_gains)
+    #(Problem: no such thing as negative information gain)
     #BEST CLASSIFIER 
     max_gain = np.amax(all_gains)
     return max_gain 
     
-
-
-
-
 
 def main():
     
@@ -48,13 +45,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-#max_gain = -9999
-    #for i in range(len(all_gains)):
-        #if all_gains[i] > max_gain:
-            #max_gain = all_gains[i]
-    #print(max_gain)
-    #print("which belongs to the attribute: stalk-color-above-ring")
-
